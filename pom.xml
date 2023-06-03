@@ -1,0 +1,55 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.atguigu</groupId>
+  <artifactId>HDFSClient</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>HDFSClient</name>
+  <url>http://maven.apache.org</url>
+
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>4.12</version>
+      <!--
+      原来是我在添加依赖时还引入了<scope>标签，它主要是用来管理依赖的部署。目前<scope>可以使用的值有5个：
+
+compile ： 缺省值，适用于所有阶段，会随着项目一起发布
+provided ：类似于compile，期望jdk，容器或使用者会提供这个依赖，如servlet.jar。
+runtime ：只在运行时使用，如JDBC驱动，适用于运行和测试阶段。
+test ：只在测试时使用，用于编译和运行代码，不会随项目发布。
+system ： 类似于provided，需要显式提供包含依赖的jar包，Maven不会在Repository中查找它。
+<scope>test</scope>部署了Junit的可用范围，只能在src下的test文件夹下才能使用，而我是在工具类写好之后直接就在工具类中编写测试代码，所以用不了。
+————————————————
+版权声明：本文为CSDN博主「来福L」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。
+原文链接：https://blog.csdn.net/newflyer666/article/details/116193512
+
+
+      -->
+<!--
+      <scope>test</scope>
+-->
+    </dependency>
+
+    <dependency>
+      <groupId>org.apache.hadoop</groupId>
+      <artifactId>hadoop-client</artifactId>
+      <version>3.1.3</version>
+    </dependency>
+
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-log4j12</artifactId>
+      <version>1.7.30</version>
+    </dependency>
+
+  </dependencies>
+</project>
